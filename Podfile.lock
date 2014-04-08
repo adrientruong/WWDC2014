@@ -1,0 +1,19 @@
+PODS:
+  - ColorArt (0.1.1)
+  - CPAnimationSequence (0.0.4)
+  - LEColorPicker (1.0.3)
+  - Shimmer (1.0.1)
+
+DEPENDENCIES:
+  - ColorArt
+  - CPAnimationSequence
+  - LEColorPicker
+  - Shimmer
+
+SPEC CHECKSUMS:
+  ColorArt: 1f039db1ce82ca4a0d8bcf2686586e37027ac84e
+  CPAnimationSequence: ff20e5d37e9b9678d9c8e276dc717c169bd1c8c9
+  LEColorPicker: e6c1702b701e3bfd55f39ccc052ba91d7aa63c0a
+  Shimmer: a1b92685f04ae7363e655f636a41a276dbb1507e
+
+COCOAPODS: 0.31.1

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Workout Hero</string>
+		<key>iconName</key>
+		<string>workout-hero</string>
+		<key>infoTextName</key>
+		<string>workout-hero-info</string>
+		<key>iTunesItemIdentifier</key>
+		<string>447619364</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>USAlliance</string>
+		<key>iconName</key>
+		<string>usalliance</string>
+		<key>infoTextName</key>
+		<string>usalliance-info</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Timers Pro</string>
+		<key>iconName</key>
+		<string>timers-pro</string>
+		<key>infoTextName</key>
+		<string>timers-pro-info</string>
+		<key>iTunesItemIdentifier</key>
+		<string>455529669</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Guess Dat Song</string>
+		<key>iconName</key>
+		<string>guess-dat-song</string>
+		<key>infoTextName</key>
+		<string>guess-dat-song-info</string>
+		<key>iTunesItemIdentifier</key>
+		<string>418751192</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Globaclock</string>
+		<key>iconName</key>
+		<string>globaclock</string>
+		<key>infoTextName</key>
+		<string>globaclock-info</string>
+		<key>iTunesItemIdentifier</key>
+		<string>452568408</string>
+	</dict>
+</array>
+</plist>

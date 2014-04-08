@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Hackathons</string>
+		<key>imageName</key>
+		<string>hackathon</string>
+		<key>detailViewControllerStoryboardIdentifier</key>
+		<string>AQTHackathonsViewController</string>
+		<key>storyFileName</key>
+		<string>hackathon-story</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Mentoring</string>
+		<key>imageName</key>
+		<string>hackathon</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Dota 2</string>
+		<key>imageName</key>
+		<string>dota2</string>
+	</dict>
+</array>
+</plist>
