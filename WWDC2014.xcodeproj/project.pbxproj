@@ -411,19 +411,7 @@
 				7A08A5EC18F890C10041E73C /* Apps */,
 				7A08A5EF18F890FF0041E73C /* Interests */,
 				7A08A5F018F89E970041E73C /* Education */,
-				7A08A5E918F8908B0041E73C /* AQTInDevelopmentViewController.h */,
-				7A08A5EA18F8908B0041E73C /* AQTInDevelopmentViewController.m */,
-				7AC295DB18FC8AD700411098 /* AQTDottedTableViewCell.h */,
-				7AC295DC18FC8AD700411098 /* AQTDottedTableViewCell.m */,
-				7AD801CF18FA05B600D46CBC /* AQTTeenHacksViewController.h */,
-				7AD801D018FA05B600D46CBC /* AQTTeenHacksViewController.m */,
-				7AD801DD18FA1B4100D46CBC /* AQTWardViewController.h */,
-				7AD801DE18FA1B4100D46CBC /* AQTWardViewController.m */,
-				7AD801D518FA178900D46CBC /* AQTScreenshotsViewController.h */,
-				7AD801D618FA178900D46CBC /* AQTScreenshotsViewController.m */,
-				7AD801D818FA19F600D46CBC /* AQTScreenshotCollectionViewCell.h */,
-				7AD801D918FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m */,
-				7AD801DB18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib */,
+				7AC295DE18FC91D100411098 /* In Development */,
 				7A9CE23418EF69EC00761203 /* Images.xcassets */,
 				7A9CE22318EF69EC00761203 /* Supporting Files */,
 			);
@@ -535,6 +523,26 @@
 				7AC295CF18FC77FA00411098 /* UIColor+YUVSpace.m */,
 			);
 			path = LEColorPicker;
+			sourceTree = "<group>";
+		};
+		7AC295DE18FC91D100411098 /* In Development */ = {
+			isa = PBXGroup;
+			children = (
+				7A08A5E918F8908B0041E73C /* AQTInDevelopmentViewController.h */,
+				7A08A5EA18F8908B0041E73C /* AQTInDevelopmentViewController.m */,
+				7AC295DB18FC8AD700411098 /* AQTDottedTableViewCell.h */,
+				7AC295DC18FC8AD700411098 /* AQTDottedTableViewCell.m */,
+				7AD801CF18FA05B600D46CBC /* AQTTeenHacksViewController.h */,
+				7AD801D018FA05B600D46CBC /* AQTTeenHacksViewController.m */,
+				7AD801DD18FA1B4100D46CBC /* AQTWardViewController.h */,
+				7AD801DE18FA1B4100D46CBC /* AQTWardViewController.m */,
+				7AD801D518FA178900D46CBC /* AQTScreenshotsViewController.h */,
+				7AD801D618FA178900D46CBC /* AQTScreenshotsViewController.m */,
+				7AD801D818FA19F600D46CBC /* AQTScreenshotCollectionViewCell.h */,
+				7AD801D918FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m */,
+				7AD801DB18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib */,
+			);
+			name = "In Development";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
