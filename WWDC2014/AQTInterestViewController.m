@@ -7,58 +7,106 @@
 //
 
 #import "AQTInterestViewController.h"
+#import "AQTInterest.h"
 
-@interface AQTInterestViewController ()
+@interface AQTInterestViewController () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UILabel *bodyLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *topImageView;
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *subtitleLabel;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *contentViewTopSpaceConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topImageViewHeightConstraint;
+
+@property (nonatomic, assign) CGPoint lastContentOffset;
 
 @end
 
 @implementation AQTInterestViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.titleLabel.text = self.interest.title;
+    self.subtitleLabel.text = self.interest.subtitle;
+    self.bodyLabel.attributedText = self.interest.bodyText;
+    self.topImageView.image = self.interest.image;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    [self.textView setTextContainerInset:UIEdgeInsetsMake(15, 10, 8, 10)];
+    CGRect frame = self.tabBarController.tabBar.frame;
+    frame.origin.y = self.tabBarController.view.frame.size.height - frame.size.height;
+    self.tabBarController.tabBar.frame = frame;
 }
 
-- (void)viewDidLayoutSubviews
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    [super viewDidLayoutSubviews];
+    self.lastContentOffset = scrollView.contentOffset;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat normalHeight = 169.0;
+    if (scrollView.contentOffset.y < 0) {
+        self.topImageViewHeightConstraint.constant = normalHeight + (-scrollView.contentOffset.y);
+        self.contentViewTopSpaceConstraint.constant = scrollView.contentOffset.y;
+        
+        [self.view needsUpdateConstraints];
+    }
+    else if (scrollView.contentOffset.y > 0 && self.lastContentOffset.y < 0) {
+        self.topImageViewHeightConstraint.constant = normalHeight;
+        self.contentViewTopSpaceConstraint.constant = 0;
+        
+        [self.view needsUpdateConstraints];
+    }
     
-    UIEdgeInsets contentInset = self.textView.contentInset;
-    contentInset.bottom = self.bottomLayoutGuide.length;
-    self.textView.contentInset = contentInset;
-    self.textView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, self.bottomLayoutGuide.length, 0);
+    if (scrollView.contentOffset.y + scrollView.frame.size.height > scrollView.contentSize.height - 0.5 || scrollView.contentOffset.y < 0) {
+        return;
+    }
+    
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+    CGRect viewFrame = self.tabBarController.view.frame;
+    
+    BOOL scrollingDown = scrollView.contentOffset.y > self.lastContentOffset.y;
+    if (scrollingDown && tabBarFrame.origin.y < viewFrame.size.height) {
+        tabBarFrame.origin.y += (scrollView.contentOffset.y - self.lastContentOffset.y);
+        tabBarFrame.origin.y = MIN(viewFrame.size.height, tabBarFrame.origin.y);
+
+        self.tabBarController.tabBar.frame = tabBarFrame;
+    }
+    else if (scrollingDown == NO && scrollView.isDecelerating && scrollView.decelerationRate >= UIScrollViewDecelerationRateFast) {
+        tabBarFrame.origin.y = viewFrame.size.height - tabBarFrame.size.height;
+        
+        [UIView animateWithDuration:0.15 animations:^{
+            self.tabBarController.tabBar.frame = tabBarFrame;
+        }];
+    }
+    
+    self.lastContentOffset = scrollView.contentOffset;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    CGRect tabBarFrame = self.tabBarController.tabBar.frame;
+    float percentToBottom = 1 - ((self.tabBarController.view.frame.size.height - tabBarFrame.origin.y) / tabBarFrame.size.height);
+    
+    if (percentToBottom >= 0.5 && percentToBottom < 1) {
+        tabBarFrame.origin.y = self.view.frame.size.height;
+    }
+    else if (percentToBottom > 0 && percentToBottom < 0.5) {
+        tabBarFrame.origin.y = self.tabBarController.view.frame.size.height - tabBarFrame.size.height;
+    }
+    
+    if (CGRectEqualToRect(self.tabBarController.tabBar.frame, tabBarFrame) == NO) {
+        [UIView animateWithDuration:0.15 animations:^{
+            self.tabBarController.tabBar.frame = tabBarFrame;
+        }];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

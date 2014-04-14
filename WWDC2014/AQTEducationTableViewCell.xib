@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="178" id="KGk-i7-Jjw" customClass="AQTEducationTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ANn-rJ-3l5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                    <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYh-10-DUc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Psi-d5-KrW" customClass="FXBlurView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="blurRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="dynamic" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently I am a junior at Sunny Hills High School, home of Lancers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="n5g-Qe-o15">
+                        <rect key="frame" x="20" y="15" width="280" height="147"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n5g-Qe-o15" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0q5-Vv-sgw"/>
+                    <constraint firstAttribute="trailing" secondItem="UYh-10-DUc" secondAttribute="trailing" id="0t8-6F-ag2"/>
+                    <constraint firstItem="Psi-d5-KrW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1BB-Hj-PDG"/>
+                    <constraint firstItem="UYh-10-DUc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CMi-hX-vGQ"/>
+                    <constraint firstAttribute="bottom" secondItem="ANn-rJ-3l5" secondAttribute="bottom" id="HTH-QE-UAm"/>
+                    <constraint firstItem="Psi-d5-KrW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LRs-Xi-7ak"/>
+                    <constraint firstAttribute="trailing" secondItem="ANn-rJ-3l5" secondAttribute="trailing" id="LrC-15-FdA"/>
+                    <constraint firstItem="ANn-rJ-3l5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="R7z-Ue-fmq"/>
+                    <constraint firstAttribute="bottom" secondItem="Psi-d5-KrW" secondAttribute="bottom" constant="-1" id="RUW-hv-AUb"/>
+                    <constraint firstAttribute="trailing" secondItem="Psi-d5-KrW" secondAttribute="trailing" id="Tf7-lI-Y5m"/>
+                    <constraint firstItem="ANn-rJ-3l5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cAB-SZ-ndP"/>
+                    <constraint firstAttribute="bottom" secondItem="n5g-Qe-o15" secondAttribute="bottom" constant="15" id="dY8-M2-E0x"/>
+                    <constraint firstAttribute="bottom" secondItem="UYh-10-DUc" secondAttribute="bottom" id="lXm-R5-KgT"/>
+                    <constraint firstItem="n5g-Qe-o15" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="sMp-qn-YFl"/>
+                    <constraint firstAttribute="trailing" secondItem="n5g-Qe-o15" secondAttribute="trailing" constant="20" id="yKF-3c-DcR"/>
+                    <constraint firstItem="UYh-10-DUc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yh7-xf-Joc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundImageView" destination="ANn-rJ-3l5" id="DjM-Gx-Vey"/>
+                <outlet property="blurView" destination="Psi-d5-KrW" id="hrd-pp-0Ez"/>
+                <outlet property="label" destination="n5g-Qe-o15" id="vmd-bF-k31"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -12,8 +12,11 @@
 #import "AQTAppCollectionViewCell+AQTApp.h"
 #import "UIView+AQTNib.h"
 #import "CoverFlowLayout.h"
-#import <LEColorPicker.h>
-#import <ColorArt/UIImage+ColorArt.h>
+#import "LEColorPicker.h"
+#import "ColorArt/UIImage+ColorArt.h"
+#import "AQTVideoFeatureMonitor.h"
+#import "AQTAppsHintView.h"
+#import "FXBlurView.h"
 
 @import StoreKit;
 
@@ -23,22 +26,37 @@
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UILabel *appNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *appInfoLabel;
 @property (nonatomic, weak) IBOutlet UITextView *appInfoTextView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *storeBarButtonItem;
+@property (nonatomic, weak) IBOutlet UIView *topBackgroundView;
+
+@property (nonatomic, weak) AQTAppsHintView *hintView;
+
+@property (nonatomic, strong) AQTVideoFeatureMonitor *featureMonitor;
 
 @property (nonatomic, weak) AQTApp *currentApp;
 
-- (IBAction)storeButtonWasTapped;
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
 
 @end
 
 @implementation AQTAppsViewController
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.tabBarItem.selectedImage = [UIImage imageNamed:@"apps-icon-selected"];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.appInfoTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 5, 15);
     
     CoverFlowLayout *layout = [[CoverFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(120, 120);
@@ -57,6 +75,63 @@
     self.apps = [AQTApp appsWithDictionaries:appDictionaries];
     
     [self updateViewWithApp:[self.apps firstObject]];
+    
+    UINib *hintViewNib = [AQTAppsHintView nib];
+    NSArray *objects = [hintViewNib instantiateWithOwner:self options:nil];
+    AQTAppsHintView *hintView = [objects firstObject];
+    hintView.translatesAutoresizingMaskIntoConstraints = NO;
+    hintView.blurView.underlyingView = self.view;
+    
+    [self.view addSubview:hintView];
+    
+    NSDictionary *views = NSDictionaryOfVariableBindings(hintView);
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(10)-[hintView]-(10)-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[hintView(==200)]-(200)-|" options:0 metrics:nil views:views]];
+    
+    self.hintView = hintView;
+    
+    AQTVideoFeatureMonitor *monitor = [[AQTVideoFeatureMonitor alloc] init];
+    monitor.featureValues = @{@"hasSmile": @YES};
+    monitor.detectorFeatureOptions = @{CIDetectorSmile: @YES};
+    monitor.ignoreTimeIntervalAfterDetect = 5;
+    
+    monitor.didDetectHandler = ^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self userDidSmileOrShake];
+        });        
+    };
+    
+    self.featureMonitor = monitor;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:84.0f/255.0f green:154.0f/255.0f blue:202.0f/255.0f alpha:1.0];
+    });
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self becomeFirstResponder];
+    
+    [self.featureMonitor startMonitoring];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self resignFirstResponder];
+    
+    [self.featureMonitor stopMonitoring];
+    
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.appInfoTextView.contentInset = UIEdgeInsetsMake(0, 0, self.tabBarController.tabBar.frame.size.height, 0);
+    self.appInfoTextView.scrollIndicatorInsets = self.appInfoTextView.contentInset;
 }
 
 - (void)addMotionEffectsToCollectionVIew
@@ -76,38 +151,6 @@
     group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
     
     [self.collectionView addMotionEffect:group];
-}
-
-#pragma mark - Actions
-
-- (IBAction)storeButtonWasTapped
-{
-    SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
-    storeViewController.delegate = self;
-    
-    NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier: self.currentApp.iTunesItemIdentifier};
-    
-    __weak AQTAppsViewController *weakSelf = self;
-    [storeViewController loadProductWithParameters:parameters completionBlock:^(BOOL success, NSError *error) {
-        if (success == NO) {
-            [weakSelf dismissViewControllerAnimated:YES completion:nil];
-            
-            NSLog(@"%@", [error userInfo]);
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription] message:@"Something went wrong loading the app store. Maybe check your internet connnection?" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-            [alertView show];
-            
-            return;
-        }
-    }];
-    
-    [self presentViewController:storeViewController animated:YES completion:nil];
-}
-
-#pragma mark - SKStoreProductViewControllerDelegate
-
-- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UICollectionView
@@ -162,24 +205,53 @@
     
     NSArray *colorPickers = @[@"USAlliance", @"Guess Dat Song", @"Globaclock"];
     
+    UIColor *backgroundColor = nil;
+    UIColor *nameTextColor = nil;
+    UIColor *infoTextColor= nil;
+    
     if ([app.name isEqualToString:@"Workout Hero"]) {
-        self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:42.0f/255.0f alpha:1.0];
-        self.appNameLabel.textColor = [UIColor colorWithRed:213.0f/255.0f green:0 blue:4.0f/255.0f alpha:1.0];
-        self.appInfoTextView.textColor = [UIColor blackColor];
+        backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:42.0f/255.0f alpha:1.0];
+        nameTextColor = [UIColor colorWithRed:0.0f/255.0f green:142.0f/255 blue:244.0f/255.0f alpha:1.0];
+        infoTextColor = [UIColor blackColor];
     }
     else if ([colorPickers containsObject:app.name]) {
         LEColorPicker *colorPicker = [[LEColorPicker alloc] init];
         LEColorScheme *scheme = [colorPicker colorSchemeFromImage:app.squircleIcon];
-        self.view.backgroundColor = scheme.backgroundColor;
-        self.appNameLabel.textColor = scheme.primaryTextColor;
-        self.appInfoTextView.textColor = scheme.secondaryTextColor;
+        backgroundColor = scheme.backgroundColor;
+        nameTextColor = scheme.primaryTextColor;
+        infoTextColor = scheme.secondaryTextColor;
     }
     else {
         SLColorArt *colorArt = [app.squircleIcon colorArt];
-        self.view.backgroundColor = colorArt.backgroundColor;
-        self.appNameLabel.textColor = colorArt.primaryColor;
-        self.appInfoTextView.textColor = colorArt.detailColor;
+        backgroundColor = colorArt.backgroundColor;
+        nameTextColor = colorArt.primaryColor;
+        infoTextColor = colorArt.detailColor;
     }
+    
+    if ([infoTextColor isEqual:[UIColor whiteColor]]) {
+        infoTextColor = [UIColor blackColor];
+    }
+    else {
+        infoTextColor = [UIColor whiteColor];
+    }
+    
+    [UIView animateWithDuration:0.30 animations:^{
+        self.topBackgroundView.backgroundColor = backgroundColor;
+        self.view.backgroundColor = nameTextColor;
+        self.appNameLabel.textColor = backgroundColor;
+        self.appInfoTextView.textColor = infoTextColor;
+    }];
+    
+    self.appInfoTextView.contentOffset = CGPointZero;
+    
+    NSArray *whiteStatusBarAppNames = @[@"Timers Pro", @"Globaclock"];
+    if ([whiteStatusBarAppNames containsObject:app.name]) {
+        self.statusBarStyle = UIStatusBarStyleLightContent;
+    }
+    else {
+        self.statusBarStyle = UIStatusBarStyleDefault;
+    }
+    [self setNeedsStatusBarAppearanceUpdate];
     
     self.currentApp = app;
 }
@@ -191,6 +263,88 @@
     [collectionView setContentOffset:offset animated:YES];
     
     [self updateViewWithAppAtIndexPath:indexPath];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return self.statusBarStyle;
+}
+
+#pragma mark - Shake to Open Store
+
+- (void)openStoreProductViewController
+{
+    SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
+    storeViewController.delegate = self;
+    
+    NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier: self.currentApp.iTunesItemIdentifier};
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+    __weak AQTAppsViewController *weakSelf = self;
+    [storeViewController loadProductWithParameters:parameters completionBlock:^(BOOL success, NSError *error) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        
+        if (success == NO) {
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+            
+            NSLog(@"%@", [error userInfo]);
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription] message:@"Something went wrong loading the app store. Maybe check your internet connnection?" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            [alertView show];
+            
+            return;
+        }
+    }];
+    
+    [self presentViewController:storeViewController animated:YES completion:nil];
+}
+
+- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)userDidSmileOrShake
+{
+    if (self.hintView != nil) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.hintView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [self.hintView removeFromSuperview];
+            self.hintView = nil;
+        }];
+    }
+    else {
+        [self userWantsToOpenStore];
+    }
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake) {
+        [self userDidSmileOrShake];
+    }
+}
+
+- (void)userWantsToOpenStore
+{
+    if ([self.currentApp.iTunesItemIdentifier length] > 0) {
+        [self openStoreProductViewController];
+    }
+    else {
+        NSString *title = NSLocalizedString(@"Sorry about that.", @"");
+        NSString *message = NSLocalizedString(@"USAlliance is an enterprise app and is not available on the app store.", @"");
+        NSString *okayTitle = NSLocalizedString(@"Okay", @"");
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:okayTitle otherButtonTitles:nil];
+        
+        [alertView show];
+    }
 }
 
 @end

@@ -42,7 +42,7 @@
         UILabel *label = self.labels[0];
         label.alpha = 1.0;
     }],
-     [CPAnimationStep after: 2.2 for:0.8 animate:^{
+     [CPAnimationStep after: 1.8 for:0.8 animate:^{
         UILabel *label = self.labels[1];
         label.alpha = 1.0;
     }],

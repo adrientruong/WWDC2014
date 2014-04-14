@@ -7,7 +7,7 @@
 //
 
 #import "AQTSlideToUnlockView.h"
-#import <FBShimmeringView.h>
+#import "FBShimmeringView.h"
 
 @interface AQTSlideToUnlockView () <UIScrollViewDelegate>
 
@@ -16,6 +16,8 @@
 
 @property (nonatomic, weak, readwrite) UILabel *unlockTextLabel;
 @property (nonatomic, strong) FBShimmeringView *shimmeringView;
+
+@property (nonatomic, weak) NSLayoutConstraint *heightConstraint;
 
 @end
 
@@ -98,10 +100,14 @@
     
     _backgroundView = backgroundView;
     
-    [self insertSubview:self.backgroundView atIndex:0];
-    NSDictionary *views = NSDictionaryOfVariableBindings(_backgroundView);
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_backgroundView]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_backgroundView]|" options:0 metrics:nil views:views]];
+    if (self.backgroundView != nil) {
+        [self insertSubview:self.backgroundView atIndex:0];
+        
+        self.backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSDictionary *views = NSDictionaryOfVariableBindings(_backgroundView);
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_backgroundView]|" options:0 metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_backgroundView]|" options:0 metrics:nil views:views]];
+    }
 }
 
 - (void)setContentView:(UIView *)contentView
@@ -117,8 +123,13 @@
     NSDictionary *views = NSDictionaryOfVariableBindings(_contentView, _shimmeringView);
     CGFloat pageWidth = self.frame.size.width;
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(pageWidth)-[_contentView(==pageWidth)]|" options:0 metrics:@{@"pageWidth": @(pageWidth)} views:views]];
-    CGFloat height = self.frame.size.height;
-    [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_contentView(==height)]|" options:0 metrics:@{@"height": @(height)} views:views]];
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:height];
+    [self.scrollView addConstraint:heightConstraint];
+    self.heightConstraint = heightConstraint;
+    
+    [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_contentView]|" options:0 metrics:nil views:views]];
     
     [self.shimmeringView removeFromSuperview];
     [self.contentView addSubview:self.shimmeringView];

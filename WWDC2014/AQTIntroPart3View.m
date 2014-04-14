@@ -10,6 +10,18 @@
 
 @implementation AQTIntroPart3View
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    UILabel *lastLabel = [self.labels lastObject];
+    CGFloat centerY = self.frame.size.height - ((self.frame.size.height - (lastLabel.frame.origin.y + lastLabel.frame.size.height)) / 2);
+    
+    CGRect frame = self.enterButton.frame;
+    frame.origin.y = centerY - (frame.size.height / 2);
+    self.enterButton.frame = frame;
+}
+
 - (void)startAnimationWithCompletion:(AQTIntroChildViewAnimationCompletionBlock)completionBlock;
 {
     CPAnimationSequence *sequence =

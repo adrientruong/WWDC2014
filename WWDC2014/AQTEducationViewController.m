@@ -7,43 +7,91 @@
 //
 
 #import "AQTEducationViewController.h"
+#import "AQTEducationCellInfo.h"
+#import "AQTEducationTableViewCell+AQTEducationCellInfo.h"
+#import "UIView+AQTNib.h"
+#import "FXBlurView.h"
 
-@interface AQTEducationViewController ()
+#define kCellReuseIdentifier NSStringFromClass([AQTEducationTableViewCell class])
+
+@interface AQTEducationViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet FXBlurView *statusBarBlurView;
+
+@property (nonatomic, strong) NSArray *cellInfos;
 
 @end
 
 @implementation AQTEducationViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)awakeFromNib
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super awakeFromNib];
+    
+    self.tabBarItem.selectedImage = [UIImage imageNamed:@"education-icon-selected"];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"EducationCellInfos" ofType:@"plist"];
+    NSArray *cellInfoDictionaries = [NSArray arrayWithContentsOfFile:path];
+    self.cellInfos = [AQTEducationCellInfo infosWithDictionaries:cellInfoDictionaries];
+    
+    UINib *nib = [AQTEducationTableViewCell nib];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kCellReuseIdentifier];
+    
+    self.tableView.rowHeight = [AQTEducationTableViewCell rowHeight];
+    
+    UIImage *background = [UIImage imageNamed:@"hello-background"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:background];
+    self.tableView.backgroundView = imageView;
+    
+    self.statusBarBlurView.underlyingView = self.tableView;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewDidLayoutSubviews
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewDidLayoutSubviews];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, self.tabBarController.tabBar.frame.size.height, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return [self.cellInfos count];
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AQTEducationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellReuseIdentifier];
+    AQTEducationCellInfo *info = self.cellInfos[indexPath.section];
+    
+    [cell configureWithInfo:info];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AQTEducationTableViewCell *educationCell = (AQTEducationTableViewCell *)cell;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [educationCell.blurView setNeedsDisplay];
+    });
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 @end

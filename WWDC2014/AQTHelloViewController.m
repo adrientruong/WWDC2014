@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    UINib *helloViewNib = [UINib nibWithNibName:@"HelloView" bundle:nil];
+    UINib *helloViewNib = [UINib nibWithNibName:@"AQTHelloView" bundle:nil];
     NSArray *objects = [helloViewNib instantiateWithOwner:self options:nil];
     self.slideToUnlockView.contentView = [objects firstObject];
     
@@ -42,5 +42,10 @@
         [self.navigationController pushViewController:introViewController animated:NO];
     }
 }
+
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return YES;
+//}
 
 @end

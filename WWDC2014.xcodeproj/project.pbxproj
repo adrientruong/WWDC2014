@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A08A5D818F7A66C0041E73C /* dota2-story.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A5D718F7A66C0041E73C /* dota2-story.rtf */; };
+		7A08A5DC18F7D7830041E73C /* AQTEducationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A5DA18F7D7830041E73C /* AQTEducationTableViewCell.m */; };
+		7A08A5DD18F7D7830041E73C /* AQTEducationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A5DB18F7D7830041E73C /* AQTEducationTableViewCell.xib */; };
+		7A08A5E018F7D8260041E73C /* AQTEducationCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A5DF18F7D8260041E73C /* AQTEducationCellInfo.m */; };
+		7A08A5E218F7D89D0041E73C /* EducationCellInfos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A5E118F7D89D0041E73C /* EducationCellInfos.plist */; };
+		7A08A5E518F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A5E418F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.m */; };
+		7A08A5E818F883060041E73C /* AQTHelloView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A5E718F883060041E73C /* AQTHelloView.m */; };
+		7A08A5EB18F8908B0041E73C /* AQTInDevelopmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A5EA18F8908B0041E73C /* AQTInDevelopmentViewController.m */; };
 		7A294BFF18F07AE400B8A6AA /* AQTIntroViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A294BFE18F07AE400B8A6AA /* AQTIntroViews.xib */; };
 		7A294C0218F0836700B8A6AA /* AQTIntroPart2View.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C0118F0836700B8A6AA /* AQTIntroPart2View.m */; };
 		7A294C0518F0DD7A00B8A6AA /* AQTIntroPart3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C0418F0DD7A00B8A6AA /* AQTIntroPart3View.m */; };
@@ -27,14 +35,17 @@
 		7A294C7418F25C0500B8A6AA /* globaclock-info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A294C7318F25C0500B8A6AA /* globaclock-info.rtf */; };
 		7A294C7818F27A6500B8A6AA /* AQTInterestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C7618F27A6500B8A6AA /* AQTInterestTableViewCell.m */; };
 		7A294C7918F27A6500B8A6AA /* AQTInterestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A294C7718F27A6500B8A6AA /* AQTInterestTableViewCell.xib */; };
-		7A294C7C18F27C5200B8A6AA /* AQTInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C7B18F27C5200B8A6AA /* AQTInterestsViewController.m */; };
+		7A294C7C18F27C5200B8A6AA /* AQTInterestsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C7B18F27C5200B8A6AA /* AQTInterestsListViewController.m */; };
 		7A294C7F18F27D0E00B8A6AA /* AQTInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C7E18F27D0E00B8A6AA /* AQTInterest.m */; };
 		7A294C8218F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C8118F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.m */; };
 		7A294C8418F27DA300B8A6AA /* Interests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A294C8318F27DA300B8A6AA /* Interests.plist */; };
 		7A294C8718F384BF00B8A6AA /* UIImage+AQTMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C8618F384BF00B8A6AA /* UIImage+AQTMask.m */; };
 		7A294C9018F3AC7D00B8A6AA /* AQTInterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C8F18F3AC7D00B8A6AA /* AQTInterestViewController.m */; };
+		7A29C3C218F50EBD002E8EA0 /* interests-intro.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A29C3C118F50EBD002E8EA0 /* interests-intro.rtf */; };
+		7A29C3C418F51039002E8EA0 /* mentoring-story.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A29C3C318F51039002E8EA0 /* mentoring-story.rtf */; };
 		7A63857B18F3D01E0054C51B /* hackathon-story.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7A63857A18F3D01E0054C51B /* hackathon-story.rtf */; };
-		7A63857E18F3D1100054C51B /* AQTStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A63857D18F3D1100054C51B /* AQTStoryViewController.m */; };
+		7A63858118F4F25D0054C51B /* AQTInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A63858018F4F25D0054C51B /* AQTInterestsViewController.m */; };
+		7A853E0218F79CDF001D1EF5 /* AQTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A853E0118F79CDF001D1EF5 /* AQTTabBarController.m */; };
 		7A9CE21D18EF69EC00761203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9CE21C18EF69EC00761203 /* Foundation.framework */; };
 		7A9CE21F18EF69EC00761203 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9CE21E18EF69EC00761203 /* CoreGraphics.framework */; };
 		7A9CE22118EF69EC00761203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9CE22018EF69EC00761203 /* UIKit.framework */; };
@@ -48,13 +59,33 @@
 		7A9CE23E18EF69EC00761203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9CE22018EF69EC00761203 /* UIKit.framework */; };
 		7A9CE24618EF69EC00761203 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE24418EF69EC00761203 /* InfoPlist.strings */; };
 		7A9CE24818EF69EC00761203 /* WWDC2014Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE24718EF69EC00761203 /* WWDC2014Tests.m */; };
+		7AC295D018FC77FA00411098 /* SLColorArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295B518FC77FA00411098 /* SLColorArt.m */; };
+		7AC295D118FC77FA00411098 /* UIImage+ColorArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295B718FC77FA00411098 /* UIImage+ColorArt.m */; };
+		7AC295D218FC77FA00411098 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295B918FC77FA00411098 /* UIImage+Scale.m */; };
+		7AC295D318FC77FA00411098 /* CPAnimationProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295BF18FC77FA00411098 /* CPAnimationProgram.m */; };
+		7AC295D418FC77FA00411098 /* CPAnimationSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295C018FC77FA00411098 /* CPAnimationSequence.m */; };
+		7AC295D518FC77FA00411098 /* CPAnimationStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295C118FC77FA00411098 /* CPAnimationStep.m */; };
+		7AC295D618FC77FA00411098 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295C518FC77FA00411098 /* FBShimmeringLayer.m */; };
+		7AC295D718FC77FA00411098 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295C718FC77FA00411098 /* FBShimmeringView.m */; };
+		7AC295D818FC77FA00411098 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295CA18FC77FA00411098 /* FXBlurView.m */; };
+		7AC295D918FC77FA00411098 /* LEColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295CD18FC77FA00411098 /* LEColorPicker.m */; };
+		7AC295DA18FC77FA00411098 /* UIColor+YUVSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295CF18FC77FA00411098 /* UIColor+YUVSpace.m */; };
+		7AC295DD18FC8AD700411098 /* AQTDottedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC295DC18FC8AD700411098 /* AQTDottedTableViewCell.m */; };
 		7AD0755A18EF6AE40093C68C /* AQTHelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0755918EF6AE40093C68C /* AQTHelloViewController.m */; };
 		7AD0755D18EF708E0093C68C /* AQTSlideToUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0755C18EF708E0093C68C /* AQTSlideToUnlockView.m */; };
-		7AD0755F18EF97CD0093C68C /* HelloView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD0755E18EF97CD0093C68C /* HelloView.xib */; };
+		7AD0755F18EF97CD0093C68C /* AQTHelloView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD0755E18EF97CD0093C68C /* AQTHelloView.xib */; };
 		7AD0756518F073BF0093C68C /* AQTIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0756418F073BF0093C68C /* AQTIntroViewController.m */; };
 		7AD0756B18F0766C0093C68C /* AQTIntroChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0756A18F0766C0093C68C /* AQTIntroChildView.m */; };
 		7AD0756E18F076A20093C68C /* AQTIntroPart1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0756D18F076A20093C68C /* AQTIntroPart1View.m */; };
-		8D873F2E784C4B60AE806250 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B22722B7D73F4F16A99FD5D2 /* libPods.a */; };
+		7AD801D118FA05B600D46CBC /* AQTTeenHacksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD801D018FA05B600D46CBC /* AQTTeenHacksViewController.m */; };
+		7AD801D418FA095D00D46CBC /* AQTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD801D318FA095D00D46CBC /* AQTWebViewController.m */; };
+		7AD801D718FA178900D46CBC /* AQTScreenshotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD801D618FA178900D46CBC /* AQTScreenshotsViewController.m */; };
+		7AD801DA18FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD801D918FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m */; };
+		7AD801DC18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD801DB18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib */; };
+		7AD801DF18FA1B4100D46CBC /* AQTWardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD801DE18FA1B4100D46CBC /* AQTWardViewController.m */; };
+		7AD98B7618FA8521007AD2B7 /* AQTVideoFeatureMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD98B7518FA8521007AD2B7 /* AQTVideoFeatureMonitor.m */; };
+		7AD98B7918FAEF15007AD2B7 /* AQTAppsHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD98B7818FAEF15007AD2B7 /* AQTAppsHintView.m */; };
+		7AD98B7B18FAEF22007AD2B7 /* AQTAppsHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD98B7A18FAEF22007AD2B7 /* AQTAppsHintView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +99,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A08A5D718F7A66C0041E73C /* dota2-story.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "dota2-story.rtf"; sourceTree = "<group>"; };
+		7A08A5D918F7D7830041E73C /* AQTEducationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTEducationTableViewCell.h; sourceTree = "<group>"; };
+		7A08A5DA18F7D7830041E73C /* AQTEducationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTEducationTableViewCell.m; sourceTree = "<group>"; };
+		7A08A5DB18F7D7830041E73C /* AQTEducationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTEducationTableViewCell.xib; sourceTree = "<group>"; };
+		7A08A5DE18F7D8260041E73C /* AQTEducationCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTEducationCellInfo.h; sourceTree = "<group>"; };
+		7A08A5DF18F7D8260041E73C /* AQTEducationCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTEducationCellInfo.m; sourceTree = "<group>"; };
+		7A08A5E118F7D89D0041E73C /* EducationCellInfos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EducationCellInfos.plist; sourceTree = "<group>"; };
+		7A08A5E318F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQTEducationTableViewCell+AQTEducationCellInfo.h"; sourceTree = "<group>"; };
+		7A08A5E418F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQTEducationTableViewCell+AQTEducationCellInfo.m"; sourceTree = "<group>"; };
+		7A08A5E618F883060041E73C /* AQTHelloView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTHelloView.h; sourceTree = "<group>"; };
+		7A08A5E718F883060041E73C /* AQTHelloView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTHelloView.m; sourceTree = "<group>"; };
+		7A08A5E918F8908B0041E73C /* AQTInDevelopmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInDevelopmentViewController.h; sourceTree = "<group>"; };
+		7A08A5EA18F8908B0041E73C /* AQTInDevelopmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInDevelopmentViewController.m; sourceTree = "<group>"; };
 		7A294BFE18F07AE400B8A6AA /* AQTIntroViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTIntroViews.xib; sourceTree = "<group>"; };
 		7A294C0018F0836700B8A6AA /* AQTIntroPart2View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTIntroPart2View.h; sourceTree = "<group>"; };
 		7A294C0118F0836700B8A6AA /* AQTIntroPart2View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTIntroPart2View.m; sourceTree = "<group>"; };
@@ -98,8 +142,8 @@
 		7A294C7518F27A6500B8A6AA /* AQTInterestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInterestTableViewCell.h; sourceTree = "<group>"; };
 		7A294C7618F27A6500B8A6AA /* AQTInterestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInterestTableViewCell.m; sourceTree = "<group>"; };
 		7A294C7718F27A6500B8A6AA /* AQTInterestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTInterestTableViewCell.xib; sourceTree = "<group>"; };
-		7A294C7A18F27C5200B8A6AA /* AQTInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInterestsViewController.h; sourceTree = "<group>"; };
-		7A294C7B18F27C5200B8A6AA /* AQTInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInterestsViewController.m; sourceTree = "<group>"; };
+		7A294C7A18F27C5200B8A6AA /* AQTInterestsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInterestsListViewController.h; sourceTree = "<group>"; };
+		7A294C7B18F27C5200B8A6AA /* AQTInterestsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInterestsListViewController.m; sourceTree = "<group>"; };
 		7A294C7D18F27D0E00B8A6AA /* AQTInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInterest.h; sourceTree = "<group>"; };
 		7A294C7E18F27D0E00B8A6AA /* AQTInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInterest.m; sourceTree = "<group>"; };
 		7A294C8018F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQTInterestTableViewCell+AQTInterest.h"; sourceTree = "<group>"; };
@@ -109,9 +153,13 @@
 		7A294C8618F384BF00B8A6AA /* UIImage+AQTMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AQTMask.m"; sourceTree = "<group>"; };
 		7A294C8E18F3AC7D00B8A6AA /* AQTInterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInterestViewController.h; sourceTree = "<group>"; };
 		7A294C8F18F3AC7D00B8A6AA /* AQTInterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInterestViewController.m; sourceTree = "<group>"; };
+		7A29C3C118F50EBD002E8EA0 /* interests-intro.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "interests-intro.rtf"; sourceTree = "<group>"; };
+		7A29C3C318F51039002E8EA0 /* mentoring-story.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "mentoring-story.rtf"; sourceTree = "<group>"; };
 		7A63857A18F3D01E0054C51B /* hackathon-story.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "hackathon-story.rtf"; sourceTree = "<group>"; };
-		7A63857C18F3D1100054C51B /* AQTStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTStoryViewController.h; sourceTree = "<group>"; };
-		7A63857D18F3D1100054C51B /* AQTStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTStoryViewController.m; sourceTree = "<group>"; };
+		7A63857F18F4F25D0054C51B /* AQTInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTInterestsViewController.h; sourceTree = "<group>"; };
+		7A63858018F4F25D0054C51B /* AQTInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTInterestsViewController.m; sourceTree = "<group>"; };
+		7A853E0018F79CDF001D1EF5 /* AQTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTTabBarController.h; sourceTree = "<group>"; };
+		7A853E0118F79CDF001D1EF5 /* AQTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTTabBarController.m; sourceTree = "<group>"; };
 		7A9CE21918EF69EC00761203 /* WWDC2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9CE21C18EF69EC00761203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A9CE21E18EF69EC00761203 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,19 +177,59 @@
 		7A9CE24318EF69EC00761203 /* WWDC2014Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WWDC2014Tests-Info.plist"; sourceTree = "<group>"; };
 		7A9CE24518EF69EC00761203 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A9CE24718EF69EC00761203 /* WWDC2014Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWDC2014Tests.m; sourceTree = "<group>"; };
+		7AC295B418FC77FA00411098 /* SLColorArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLColorArt.h; sourceTree = "<group>"; };
+		7AC295B518FC77FA00411098 /* SLColorArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLColorArt.m; sourceTree = "<group>"; };
+		7AC295B618FC77FA00411098 /* UIImage+ColorArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorArt.h"; sourceTree = "<group>"; };
+		7AC295B718FC77FA00411098 /* UIImage+ColorArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorArt.m"; sourceTree = "<group>"; };
+		7AC295B818FC77FA00411098 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		7AC295B918FC77FA00411098 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
+		7AC295BB18FC77FA00411098 /* CPAnimationProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAnimationProgram.h; sourceTree = "<group>"; };
+		7AC295BC18FC77FA00411098 /* CPAnimationSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAnimationSequence.h; sourceTree = "<group>"; };
+		7AC295BD18FC77FA00411098 /* CPAnimationStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAnimationStep.h; sourceTree = "<group>"; };
+		7AC295BF18FC77FA00411098 /* CPAnimationProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAnimationProgram.m; sourceTree = "<group>"; };
+		7AC295C018FC77FA00411098 /* CPAnimationSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAnimationSequence.m; sourceTree = "<group>"; };
+		7AC295C118FC77FA00411098 /* CPAnimationStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAnimationStep.m; sourceTree = "<group>"; };
+		7AC295C318FC77FA00411098 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		7AC295C418FC77FA00411098 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		7AC295C518FC77FA00411098 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		7AC295C618FC77FA00411098 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		7AC295C718FC77FA00411098 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		7AC295C918FC77FA00411098 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		7AC295CA18FC77FA00411098 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		7AC295CC18FC77FA00411098 /* LEColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEColorPicker.h; sourceTree = "<group>"; };
+		7AC295CD18FC77FA00411098 /* LEColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEColorPicker.m; sourceTree = "<group>"; };
+		7AC295CE18FC77FA00411098 /* UIColor+YUVSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YUVSpace.h"; sourceTree = "<group>"; };
+		7AC295CF18FC77FA00411098 /* UIColor+YUVSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YUVSpace.m"; sourceTree = "<group>"; };
+		7AC295DB18FC8AD700411098 /* AQTDottedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTDottedTableViewCell.h; sourceTree = "<group>"; };
+		7AC295DC18FC8AD700411098 /* AQTDottedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTDottedTableViewCell.m; sourceTree = "<group>"; };
 		7AD0755818EF6AE40093C68C /* AQTHelloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTHelloViewController.h; sourceTree = "<group>"; };
 		7AD0755918EF6AE40093C68C /* AQTHelloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTHelloViewController.m; sourceTree = "<group>"; };
 		7AD0755B18EF708E0093C68C /* AQTSlideToUnlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTSlideToUnlockView.h; sourceTree = "<group>"; };
 		7AD0755C18EF708E0093C68C /* AQTSlideToUnlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTSlideToUnlockView.m; sourceTree = "<group>"; };
-		7AD0755E18EF97CD0093C68C /* HelloView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelloView.xib; sourceTree = "<group>"; };
+		7AD0755E18EF97CD0093C68C /* AQTHelloView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTHelloView.xib; sourceTree = "<group>"; };
 		7AD0756318F073BF0093C68C /* AQTIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTIntroViewController.h; sourceTree = "<group>"; };
 		7AD0756418F073BF0093C68C /* AQTIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTIntroViewController.m; sourceTree = "<group>"; };
 		7AD0756918F0766C0093C68C /* AQTIntroChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTIntroChildView.h; sourceTree = "<group>"; };
 		7AD0756A18F0766C0093C68C /* AQTIntroChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTIntroChildView.m; sourceTree = "<group>"; };
 		7AD0756C18F076A20093C68C /* AQTIntroPart1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTIntroPart1View.h; sourceTree = "<group>"; };
 		7AD0756D18F076A20093C68C /* AQTIntroPart1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTIntroPart1View.m; sourceTree = "<group>"; };
+		7AD801CF18FA05B600D46CBC /* AQTTeenHacksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTTeenHacksViewController.h; sourceTree = "<group>"; };
+		7AD801D018FA05B600D46CBC /* AQTTeenHacksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTTeenHacksViewController.m; sourceTree = "<group>"; };
+		7AD801D218FA095D00D46CBC /* AQTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTWebViewController.h; sourceTree = "<group>"; };
+		7AD801D318FA095D00D46CBC /* AQTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTWebViewController.m; sourceTree = "<group>"; };
+		7AD801D518FA178900D46CBC /* AQTScreenshotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTScreenshotsViewController.h; sourceTree = "<group>"; };
+		7AD801D618FA178900D46CBC /* AQTScreenshotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTScreenshotsViewController.m; sourceTree = "<group>"; };
+		7AD801D818FA19F600D46CBC /* AQTScreenshotCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTScreenshotCollectionViewCell.h; sourceTree = "<group>"; };
+		7AD801D918FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTScreenshotCollectionViewCell.m; sourceTree = "<group>"; };
+		7AD801DB18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTScreenshotCollectionViewCell.xib; sourceTree = "<group>"; };
+		7AD801DD18FA1B4100D46CBC /* AQTWardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTWardViewController.h; sourceTree = "<group>"; };
+		7AD801DE18FA1B4100D46CBC /* AQTWardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTWardViewController.m; sourceTree = "<group>"; };
+		7AD98B7418FA8521007AD2B7 /* AQTVideoFeatureMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTVideoFeatureMonitor.h; sourceTree = "<group>"; };
+		7AD98B7518FA8521007AD2B7 /* AQTVideoFeatureMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTVideoFeatureMonitor.m; sourceTree = "<group>"; };
+		7AD98B7718FAEF15007AD2B7 /* AQTAppsHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTAppsHintView.h; sourceTree = "<group>"; };
+		7AD98B7818FAEF15007AD2B7 /* AQTAppsHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTAppsHintView.m; sourceTree = "<group>"; };
+		7AD98B7A18FAEF22007AD2B7 /* AQTAppsHintView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTAppsHintView.xib; sourceTree = "<group>"; };
 		B22722B7D73F4F16A99FD5D2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF73355647544FC3A50C7985 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +240,6 @@
 				7A9CE21F18EF69EC00761203 /* CoreGraphics.framework in Frameworks */,
 				7A9CE22118EF69EC00761203 /* UIKit.framework in Frameworks */,
 				7A9CE21D18EF69EC00761203 /* Foundation.framework in Frameworks */,
-				8D873F2E784C4B60AE806250 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +256,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A08A5EC18F890C10041E73C /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				7A294C2718F2015E00B8A6AA /* workout-hero-info.rtf */,
+				7A294C2918F2051300B8A6AA /* usalliance-info.rtf */,
+				7A294C6F18F2599200B8A6AA /* guess-dat-song-info.rtf */,
+				7A294C7118F25A8C00B8A6AA /* timers-pro-info.rtf */,
+				7A294C7318F25C0500B8A6AA /* globaclock-info.rtf */,
+				7A294C0818F112D900B8A6AA /* AQTAppsViewController.h */,
+				7A294C0918F112D900B8A6AA /* AQTAppsViewController.m */,
+				7AD98B7718FAEF15007AD2B7 /* AQTAppsHintView.h */,
+				7AD98B7818FAEF15007AD2B7 /* AQTAppsHintView.m */,
+				7AD98B7A18FAEF22007AD2B7 /* AQTAppsHintView.xib */,
+				7AD98B7418FA8521007AD2B7 /* AQTVideoFeatureMonitor.h */,
+				7AD98B7518FA8521007AD2B7 /* AQTVideoFeatureMonitor.m */,
+				7A294C2118F1D3C000B8A6AA /* CoverFlowLayout.h */,
+				7A294C2218F1D3C000B8A6AA /* CoverFlowLayout.m */,
+				7A294C0E18F1169500B8A6AA /* AQTAppCollectionViewCell.h */,
+				7A294C0F18F1169500B8A6AA /* AQTAppCollectionViewCell.m */,
+				7A294C1618F1183700B8A6AA /* AQTAppCollectionViewCell+AQTApp.h */,
+				7A294C1718F1183700B8A6AA /* AQTAppCollectionViewCell+AQTApp.m */,
+				7A294C1118F116C300B8A6AA /* AQTAppCollectionViewCell.xib */,
+				7A294C0B18F113CD00B8A6AA /* AQTApp.h */,
+				7A294C0C18F113CD00B8A6AA /* AQTApp.m */,
+				7A294C1918F1324F00B8A6AA /* Apps.plist */,
+			);
+			name = Apps;
+			sourceTree = "<group>";
+		};
+		7A08A5ED18F890D80041E73C /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				7A294C0618F0FEC500B8A6AA /* Intro.storyboard */,
+				7AD0755E18EF97CD0093C68C /* AQTHelloView.xib */,
+				7A08A5E618F883060041E73C /* AQTHelloView.h */,
+				7A08A5E718F883060041E73C /* AQTHelloView.m */,
+				7AD0755818EF6AE40093C68C /* AQTHelloViewController.h */,
+				7AD0755918EF6AE40093C68C /* AQTHelloViewController.m */,
+				7AD0756318F073BF0093C68C /* AQTIntroViewController.h */,
+				7AD0756418F073BF0093C68C /* AQTIntroViewController.m */,
+				7AD0756918F0766C0093C68C /* AQTIntroChildView.h */,
+				7AD0756A18F0766C0093C68C /* AQTIntroChildView.m */,
+				7AD0756C18F076A20093C68C /* AQTIntroPart1View.h */,
+				7AD0756D18F076A20093C68C /* AQTIntroPart1View.m */,
+				7A294C0018F0836700B8A6AA /* AQTIntroPart2View.h */,
+				7A294C0118F0836700B8A6AA /* AQTIntroPart2View.m */,
+				7A294C0318F0DD7A00B8A6AA /* AQTIntroPart3View.h */,
+				7A294C0418F0DD7A00B8A6AA /* AQTIntroPart3View.m */,
+				7A294BFE18F07AE400B8A6AA /* AQTIntroViews.xib */,
+				7AD0755B18EF708E0093C68C /* AQTSlideToUnlockView.h */,
+				7AD0755C18EF708E0093C68C /* AQTSlideToUnlockView.m */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		7A08A5EE18F890F10041E73C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				7A853E0018F79CDF001D1EF5 /* AQTTabBarController.h */,
+				7A853E0118F79CDF001D1EF5 /* AQTTabBarController.m */,
+				7A294C8518F384BF00B8A6AA /* UIImage+AQTMask.h */,
+				7A294C8618F384BF00B8A6AA /* UIImage+AQTMask.m */,
+				7A294C1318F117AE00B8A6AA /* UIView+AQTNib.h */,
+				7A294C1418F117AE00B8A6AA /* UIView+AQTNib.m */,
+				7AD801D218FA095D00D46CBC /* AQTWebViewController.h */,
+				7AD801D318FA095D00D46CBC /* AQTWebViewController.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		7A08A5EF18F890FF0041E73C /* Interests */ = {
+			isa = PBXGroup;
+			children = (
+				7A294C7518F27A6500B8A6AA /* AQTInterestTableViewCell.h */,
+				7A294C7618F27A6500B8A6AA /* AQTInterestTableViewCell.m */,
+				7A294C7718F27A6500B8A6AA /* AQTInterestTableViewCell.xib */,
+				7A294C7A18F27C5200B8A6AA /* AQTInterestsListViewController.h */,
+				7A294C7B18F27C5200B8A6AA /* AQTInterestsListViewController.m */,
+				7A63857F18F4F25D0054C51B /* AQTInterestsViewController.h */,
+				7A63858018F4F25D0054C51B /* AQTInterestsViewController.m */,
+				7A294C8E18F3AC7D00B8A6AA /* AQTInterestViewController.h */,
+				7A294C8F18F3AC7D00B8A6AA /* AQTInterestViewController.m */,
+				7A294C8318F27DA300B8A6AA /* Interests.plist */,
+				7A294C8018F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.h */,
+				7A294C8118F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.m */,
+				7A294C7D18F27D0E00B8A6AA /* AQTInterest.h */,
+				7A294C7E18F27D0E00B8A6AA /* AQTInterest.m */,
+				7A63857A18F3D01E0054C51B /* hackathon-story.rtf */,
+				7A29C3C318F51039002E8EA0 /* mentoring-story.rtf */,
+				7A29C3C118F50EBD002E8EA0 /* interests-intro.rtf */,
+				7A08A5D718F7A66C0041E73C /* dota2-story.rtf */,
+			);
+			name = Interests;
+			sourceTree = "<group>";
+		};
+		7A08A5F018F89E970041E73C /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				7A08A5DE18F7D8260041E73C /* AQTEducationCellInfo.h */,
+				7A08A5DF18F7D8260041E73C /* AQTEducationCellInfo.m */,
+				7A08A5E118F7D89D0041E73C /* EducationCellInfos.plist */,
+				7A294C6C18F2509400B8A6AA /* AQTEducationViewController.h */,
+				7A294C6D18F2509400B8A6AA /* AQTEducationViewController.m */,
+				7A08A5D918F7D7830041E73C /* AQTEducationTableViewCell.h */,
+				7A08A5DA18F7D7830041E73C /* AQTEducationTableViewCell.m */,
+				7A08A5E318F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.h */,
+				7A08A5E418F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.m */,
+				7A08A5DB18F7D7830041E73C /* AQTEducationTableViewCell.xib */,
+			);
+			name = Education;
+			sourceTree = "<group>";
+		};
 		7A9CE21018EF69EC00761203 = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +375,6 @@
 				7A9CE24118EF69EC00761203 /* WWDC2014Tests */,
 				7A9CE21B18EF69EC00761203 /* Frameworks */,
 				7A9CE21A18EF69EC00761203 /* Products */,
-				BF73355647544FC3A50C7985 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,61 +405,25 @@
 				7A9CE22B18EF69EC00761203 /* AppDelegate.h */,
 				7A9CE22C18EF69EC00761203 /* AppDelegate.m */,
 				7A9CE22E18EF69EC00761203 /* Main.storyboard */,
-				7A294C0618F0FEC500B8A6AA /* Intro.storyboard */,
-				7AD0755E18EF97CD0093C68C /* HelloView.xib */,
-				7A294C6C18F2509400B8A6AA /* AQTEducationViewController.h */,
-				7A294C6D18F2509400B8A6AA /* AQTEducationViewController.m */,
-				7A294C7518F27A6500B8A6AA /* AQTInterestTableViewCell.h */,
-				7A294C7618F27A6500B8A6AA /* AQTInterestTableViewCell.m */,
-				7A294C7718F27A6500B8A6AA /* AQTInterestTableViewCell.xib */,
-				7A294C7A18F27C5200B8A6AA /* AQTInterestsViewController.h */,
-				7A294C7B18F27C5200B8A6AA /* AQTInterestsViewController.m */,
-				7A294C8E18F3AC7D00B8A6AA /* AQTInterestViewController.h */,
-				7A294C8F18F3AC7D00B8A6AA /* AQTInterestViewController.m */,
-				7A63857C18F3D1100054C51B /* AQTStoryViewController.h */,
-				7A63857D18F3D1100054C51B /* AQTStoryViewController.m */,
-				7A294C8318F27DA300B8A6AA /* Interests.plist */,
-				7A294C8018F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.h */,
-				7A294C8118F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.m */,
-				7A294C7D18F27D0E00B8A6AA /* AQTInterest.h */,
-				7A294C7E18F27D0E00B8A6AA /* AQTInterest.m */,
-				7A294C8518F384BF00B8A6AA /* UIImage+AQTMask.h */,
-				7A294C8618F384BF00B8A6AA /* UIImage+AQTMask.m */,
-				7A294C1318F117AE00B8A6AA /* UIView+AQTNib.h */,
-				7A294C1418F117AE00B8A6AA /* UIView+AQTNib.m */,
-				7A294C0818F112D900B8A6AA /* AQTAppsViewController.h */,
-				7A294C0918F112D900B8A6AA /* AQTAppsViewController.m */,
-				7A294C2118F1D3C000B8A6AA /* CoverFlowLayout.h */,
-				7A294C2218F1D3C000B8A6AA /* CoverFlowLayout.m */,
-				7A294C0E18F1169500B8A6AA /* AQTAppCollectionViewCell.h */,
-				7A294C0F18F1169500B8A6AA /* AQTAppCollectionViewCell.m */,
-				7A294C1618F1183700B8A6AA /* AQTAppCollectionViewCell+AQTApp.h */,
-				7A294C1718F1183700B8A6AA /* AQTAppCollectionViewCell+AQTApp.m */,
-				7A294C1118F116C300B8A6AA /* AQTAppCollectionViewCell.xib */,
-				7A294C0B18F113CD00B8A6AA /* AQTApp.h */,
-				7A294C0C18F113CD00B8A6AA /* AQTApp.m */,
-				7A294C1918F1324F00B8A6AA /* Apps.plist */,
-				7AD0755818EF6AE40093C68C /* AQTHelloViewController.h */,
-				7AD0755918EF6AE40093C68C /* AQTHelloViewController.m */,
-				7AD0756318F073BF0093C68C /* AQTIntroViewController.h */,
-				7AD0756418F073BF0093C68C /* AQTIntroViewController.m */,
-				7AD0756918F0766C0093C68C /* AQTIntroChildView.h */,
-				7AD0756A18F0766C0093C68C /* AQTIntroChildView.m */,
-				7AD0756C18F076A20093C68C /* AQTIntroPart1View.h */,
-				7AD0756D18F076A20093C68C /* AQTIntroPart1View.m */,
-				7A294C0018F0836700B8A6AA /* AQTIntroPart2View.h */,
-				7A294C0118F0836700B8A6AA /* AQTIntroPart2View.m */,
-				7A294C0318F0DD7A00B8A6AA /* AQTIntroPart3View.h */,
-				7A294C0418F0DD7A00B8A6AA /* AQTIntroPart3View.m */,
-				7A294C2718F2015E00B8A6AA /* workout-hero-info.rtf */,
-				7A294C2918F2051300B8A6AA /* usalliance-info.rtf */,
-				7A294C6F18F2599200B8A6AA /* guess-dat-song-info.rtf */,
-				7A294C7118F25A8C00B8A6AA /* timers-pro-info.rtf */,
-				7A294C7318F25C0500B8A6AA /* globaclock-info.rtf */,
-				7A63857A18F3D01E0054C51B /* hackathon-story.rtf */,
-				7A294BFE18F07AE400B8A6AA /* AQTIntroViews.xib */,
-				7AD0755B18EF708E0093C68C /* AQTSlideToUnlockView.h */,
-				7AD0755C18EF708E0093C68C /* AQTSlideToUnlockView.m */,
+				7AC295B218FC77D500411098 /* Pods */,
+				7A08A5EE18F890F10041E73C /* General */,
+				7A08A5ED18F890D80041E73C /* Intro */,
+				7A08A5EC18F890C10041E73C /* Apps */,
+				7A08A5EF18F890FF0041E73C /* Interests */,
+				7A08A5F018F89E970041E73C /* Education */,
+				7A08A5E918F8908B0041E73C /* AQTInDevelopmentViewController.h */,
+				7A08A5EA18F8908B0041E73C /* AQTInDevelopmentViewController.m */,
+				7AC295DB18FC8AD700411098 /* AQTDottedTableViewCell.h */,
+				7AC295DC18FC8AD700411098 /* AQTDottedTableViewCell.m */,
+				7AD801CF18FA05B600D46CBC /* AQTTeenHacksViewController.h */,
+				7AD801D018FA05B600D46CBC /* AQTTeenHacksViewController.m */,
+				7AD801DD18FA1B4100D46CBC /* AQTWardViewController.h */,
+				7AD801DE18FA1B4100D46CBC /* AQTWardViewController.m */,
+				7AD801D518FA178900D46CBC /* AQTScreenshotsViewController.h */,
+				7AD801D618FA178900D46CBC /* AQTScreenshotsViewController.m */,
+				7AD801D818FA19F600D46CBC /* AQTScreenshotCollectionViewCell.h */,
+				7AD801D918FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m */,
+				7AD801DB18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib */,
 				7A9CE23418EF69EC00761203 /* Images.xcassets */,
 				7A9CE22318EF69EC00761203 /* Supporting Files */,
 			);
@@ -297,6 +459,84 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7AC295B218FC77D500411098 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295B318FC77FA00411098 /* ColorArt */,
+				7AC295BA18FC77FA00411098 /* CPAnimationSequence */,
+				7AC295C218FC77FA00411098 /* FBShimmering */,
+				7AC295C818FC77FA00411098 /* FXBlurView */,
+				7AC295CB18FC77FA00411098 /* LEColorPicker */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7AC295B318FC77FA00411098 /* ColorArt */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295B418FC77FA00411098 /* SLColorArt.h */,
+				7AC295B518FC77FA00411098 /* SLColorArt.m */,
+				7AC295B618FC77FA00411098 /* UIImage+ColorArt.h */,
+				7AC295B718FC77FA00411098 /* UIImage+ColorArt.m */,
+				7AC295B818FC77FA00411098 /* UIImage+Scale.h */,
+				7AC295B918FC77FA00411098 /* UIImage+Scale.m */,
+			);
+			path = ColorArt;
+			sourceTree = "<group>";
+		};
+		7AC295BA18FC77FA00411098 /* CPAnimationSequence */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295BB18FC77FA00411098 /* CPAnimationProgram.h */,
+				7AC295BC18FC77FA00411098 /* CPAnimationSequence.h */,
+				7AC295BD18FC77FA00411098 /* CPAnimationStep.h */,
+				7AC295BE18FC77FA00411098 /* private */,
+			);
+			path = CPAnimationSequence;
+			sourceTree = "<group>";
+		};
+		7AC295BE18FC77FA00411098 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295BF18FC77FA00411098 /* CPAnimationProgram.m */,
+				7AC295C018FC77FA00411098 /* CPAnimationSequence.m */,
+				7AC295C118FC77FA00411098 /* CPAnimationStep.m */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		7AC295C218FC77FA00411098 /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295C318FC77FA00411098 /* FBShimmering.h */,
+				7AC295C418FC77FA00411098 /* FBShimmeringLayer.h */,
+				7AC295C518FC77FA00411098 /* FBShimmeringLayer.m */,
+				7AC295C618FC77FA00411098 /* FBShimmeringView.h */,
+				7AC295C718FC77FA00411098 /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
+			sourceTree = "<group>";
+		};
+		7AC295C818FC77FA00411098 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295C918FC77FA00411098 /* FXBlurView.h */,
+				7AC295CA18FC77FA00411098 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		7AC295CB18FC77FA00411098 /* LEColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				7AC295CC18FC77FA00411098 /* LEColorPicker.h */,
+				7AC295CD18FC77FA00411098 /* LEColorPicker.m */,
+				7AC295CE18FC77FA00411098 /* UIColor+YUVSpace.h */,
+				7AC295CF18FC77FA00411098 /* UIColor+YUVSpace.m */,
+			);
+			path = LEColorPicker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,11 +544,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A9CE24B18EF69EC00761203 /* Build configuration list for PBXNativeTarget "WWDC2014" */;
 			buildPhases = (
-				0E53939BBAC8403789A17712 /* Check Pods Manifest.lock */,
 				7A9CE21518EF69EC00761203 /* Sources */,
 				7A9CE21618EF69EC00761203 /* Frameworks */,
 				7A9CE21718EF69EC00761203 /* Resources */,
-				8AB4A039E63A4569A55442D4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,18 +616,25 @@
 				7A294C1A18F1324F00B8A6AA /* Apps.plist in Resources */,
 				7A294C2A18F2051300B8A6AA /* usalliance-info.rtf in Resources */,
 				7A63857B18F3D01E0054C51B /* hackathon-story.rtf in Resources */,
+				7A08A5DD18F7D7830041E73C /* AQTEducationTableViewCell.xib in Resources */,
 				7A294BFF18F07AE400B8A6AA /* AQTIntroViews.xib in Resources */,
 				7A294C7418F25C0500B8A6AA /* globaclock-info.rtf in Resources */,
 				7A9CE23518EF69EC00761203 /* Images.xcassets in Resources */,
 				7A294C1218F116C300B8A6AA /* AQTAppCollectionViewCell.xib in Resources */,
-				7AD0755F18EF97CD0093C68C /* HelloView.xib in Resources */,
+				7AD0755F18EF97CD0093C68C /* AQTHelloView.xib in Resources */,
+				7AD801DC18FA1A1400D46CBC /* AQTScreenshotCollectionViewCell.xib in Resources */,
 				7A9CE22718EF69EC00761203 /* InfoPlist.strings in Resources */,
 				7A294C8418F27DA300B8A6AA /* Interests.plist in Resources */,
 				7A294C7918F27A6500B8A6AA /* AQTInterestTableViewCell.xib in Resources */,
 				7A294C7018F2599200B8A6AA /* guess-dat-song-info.rtf in Resources */,
+				7A08A5E218F7D89D0041E73C /* EducationCellInfos.plist in Resources */,
 				7A294C7218F25A8C00B8A6AA /* timers-pro-info.rtf in Resources */,
+				7A29C3C218F50EBD002E8EA0 /* interests-intro.rtf in Resources */,
 				7A9CE23018EF69EC00761203 /* Main.storyboard in Resources */,
+				7AD98B7B18FAEF22007AD2B7 /* AQTAppsHintView.xib in Resources */,
 				7A294C2818F2015E00B8A6AA /* workout-hero-info.rtf in Resources */,
+				7A08A5D818F7A66C0041E73C /* dota2-story.rtf in Resources */,
+				7A29C3C418F51039002E8EA0 /* mentoring-story.rtf in Resources */,
 				7A294C0718F0FEC500B8A6AA /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,66 +649,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0E53939BBAC8403789A17712 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8AB4A039E63A4569A55442D4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7A9CE21518EF69EC00761203 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7AD0756B18F0766C0093C68C /* AQTIntroChildView.m in Sources */,
+				7A08A5E018F7D8260041E73C /* AQTEducationCellInfo.m in Sources */,
+				7AC295D318FC77FA00411098 /* CPAnimationProgram.m in Sources */,
+				7A63858118F4F25D0054C51B /* AQTInterestsViewController.m in Sources */,
+				7AD801DF18FA1B4100D46CBC /* AQTWardViewController.m in Sources */,
 				7A294C7818F27A6500B8A6AA /* AQTInterestTableViewCell.m in Sources */,
+				7AD801D418FA095D00D46CBC /* AQTWebViewController.m in Sources */,
 				7AD0755D18EF708E0093C68C /* AQTSlideToUnlockView.m in Sources */,
+				7A08A5DC18F7D7830041E73C /* AQTEducationTableViewCell.m in Sources */,
 				7A294C0D18F113CD00B8A6AA /* AQTApp.m in Sources */,
+				7AC295D418FC77FA00411098 /* CPAnimationSequence.m in Sources */,
 				7A294C8718F384BF00B8A6AA /* UIImage+AQTMask.m in Sources */,
 				7A294C6E18F2509400B8A6AA /* AQTEducationViewController.m in Sources */,
+				7AC295D018FC77FA00411098 /* SLColorArt.m in Sources */,
 				7AD0756E18F076A20093C68C /* AQTIntroPart1View.m in Sources */,
+				7AC295D518FC77FA00411098 /* CPAnimationStep.m in Sources */,
+				7AC295DD18FC8AD700411098 /* AQTDottedTableViewCell.m in Sources */,
+				7A08A5E818F883060041E73C /* AQTHelloView.m in Sources */,
+				7AC295D818FC77FA00411098 /* FXBlurView.m in Sources */,
+				7AD801DA18FA19F600D46CBC /* AQTScreenshotCollectionViewCell.m in Sources */,
+				7AC295D118FC77FA00411098 /* UIImage+ColorArt.m in Sources */,
 				7A294C0218F0836700B8A6AA /* AQTIntroPart2View.m in Sources */,
 				7A294C7F18F27D0E00B8A6AA /* AQTInterest.m in Sources */,
+				7AC295DA18FC77FA00411098 /* UIColor+YUVSpace.m in Sources */,
+				7AD98B7618FA8521007AD2B7 /* AQTVideoFeatureMonitor.m in Sources */,
 				7A294C9018F3AC7D00B8A6AA /* AQTInterestViewController.m in Sources */,
-				7A294C7C18F27C5200B8A6AA /* AQTInterestsViewController.m in Sources */,
+				7AC295D718FC77FA00411098 /* FBShimmeringView.m in Sources */,
+				7AC295D618FC77FA00411098 /* FBShimmeringLayer.m in Sources */,
+				7AD801D718FA178900D46CBC /* AQTScreenshotsViewController.m in Sources */,
+				7A294C7C18F27C5200B8A6AA /* AQTInterestsListViewController.m in Sources */,
+				7AD98B7918FAEF15007AD2B7 /* AQTAppsHintView.m in Sources */,
+				7A08A5EB18F8908B0041E73C /* AQTInDevelopmentViewController.m in Sources */,
 				7A294C0A18F112D900B8A6AA /* AQTAppsViewController.m in Sources */,
 				7AD0756518F073BF0093C68C /* AQTIntroViewController.m in Sources */,
+				7A08A5E518F7D8E50041E73C /* AQTEducationTableViewCell+AQTEducationCellInfo.m in Sources */,
 				7A9CE22D18EF69EC00761203 /* AppDelegate.m in Sources */,
+				7AC295D218FC77FA00411098 /* UIImage+Scale.m in Sources */,
+				7AD801D118FA05B600D46CBC /* AQTTeenHacksViewController.m in Sources */,
 				7A294C0518F0DD7A00B8A6AA /* AQTIntroPart3View.m in Sources */,
 				7A294C1818F1183700B8A6AA /* AQTAppCollectionViewCell+AQTApp.m in Sources */,
 				7A9CE22918EF69EC00761203 /* main.m in Sources */,
 				7A294C8218F27D4500B8A6AA /* AQTInterestTableViewCell+AQTInterest.m in Sources */,
 				7A294C1018F1169500B8A6AA /* AQTAppCollectionViewCell.m in Sources */,
-				7A63857E18F3D1100054C51B /* AQTStoryViewController.m in Sources */,
 				7AD0755A18EF6AE40093C68C /* AQTHelloViewController.m in Sources */,
+				7AC295D918FC77FA00411098 /* LEColorPicker.m in Sources */,
 				7A294C2318F1D3C000B8A6AA /* CoverFlowLayout.m in Sources */,
+				7A853E0218F79CDF001D1EF5 /* AQTTabBarController.m in Sources */,
 				7A294C1518F117AE00B8A6AA /* UIView+AQTNib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,7 +823,6 @@
 		};
 		7A9CE24C18EF69EC00761203 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF73355647544FC3A50C7985 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -600,7 +836,6 @@
 		};
 		7A9CE24D18EF69EC00761203 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF73355647544FC3A50C7985 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

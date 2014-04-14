@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CPAnimationSequence.h>
-#import <CPAnimationProgram.h>
+#import "CPAnimationSequence.h"
+#import "CPAnimationProgram.h"
 
 typedef void (^AQTIntroChildViewAnimationCompletionBlock)();
 

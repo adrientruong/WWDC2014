@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AQTInterest;
+
 @interface AQTInterestViewController : UIViewController
+
+@property (nonatomic, strong) AQTInterest *interest;
 
 @end

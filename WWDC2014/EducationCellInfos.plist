@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>shhs</string>
+		<key>text</key>
+		<string>Currently, I am a junior at Sunny Hills High School, home of the Lancers.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>ap-ib</string>
+		<key>text</key>
+		<string>I have taken the hardest courses available (AP/IB) while maintaining all A&apos;s.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>shhs</string>
+		<key>text</key>
+		<string>I am on track to become valedictorian.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>fisler</string>
+		<key>text</key>
+		<string>Before coming to Sunny Hills, I attended Fisler which had a 1:1 laptop program.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>macbook</string>
+		<key>text</key>
+		<string>From 3rd to 8th grade, I interacted with computers in the classroom daily.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>software</string>
+		<key>text</key>
+		<string>So, from 3rd-5th, I used software.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>building-pc</string>
+		<key>text</key>
+		<string>From 6th-7th, I assembled hardware.</string>
+	</dict>
+	<dict>
+		<key>backgroundImageName</key>
+		<string>hello-background</string>
+		<key>text</key>
+		<string>And ever since, I have built software.</string>
+	</dict>
+</array>
+</plist>

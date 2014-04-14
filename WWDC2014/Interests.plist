@@ -4,25 +4,43 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Hackathons</string>
+		<string>Hello!</string>
+		<key>subtitle</key>
+		<string>Welcome to my interests</string>
 		<key>imageName</key>
-		<string>hackathon</string>
-		<key>detailViewControllerStoryboardIdentifier</key>
-		<string>AQTHackathonsViewController</string>
-		<key>storyFileName</key>
+		<string>hello-background</string>
+		<key>bodyFileName</key>
+		<string>interests-intro</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Hackathons</string>
+		<key>subtitle</key>
+		<string>How I fell in love with them</string>
+		<key>imageName</key>
+		<string>lahacks</string>
+		<key>bodyFileName</key>
 		<string>hackathon-story</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Mentoring</string>
+		<key>subtitle</key>
+		<string>Helping the world code</string>
 		<key>imageName</key>
 		<string>hackathon</string>
+		<key>bodyFileName</key>
+		<string>mentoring-story</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Dota 2</string>
+		<key>subtitle</key>
+		<string>More than just a game</string>
 		<key>imageName</key>
 		<string>dota2</string>
+		<key>bodyFileName</key>
+		<string>dota2-story</string>
 	</dict>
 </array>
 </plist>

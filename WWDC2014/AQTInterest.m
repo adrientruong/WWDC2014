@@ -27,12 +27,12 @@
     self = [self init];
     
     self.title = dictionary[@"title"];
+    self.subtitle = dictionary[@"subtitle"];
     self.image = [UIImage imageNamed:dictionary[@"imageName"]];
-    self.detailViewControllerStoryboardIdentifier = dictionary[@"detailViewControllerStoryboardIdentifier"];
     
-    NSString *storyFileName = dictionary[@"storyFileName"];
-    NSURL *storyFileURL = [[NSBundle mainBundle] URLForResource:storyFileName withExtension:@"rtf"];
-    self.storyText = [[NSAttributedString alloc] initWithFileURL:storyFileURL options:nil documentAttributes:nil error:nil];
+    NSString *bodyFileName = dictionary[@"bodyFileName"];
+    NSURL *bodyFileURL = [[NSBundle mainBundle] URLForResource:bodyFileName withExtension:@"rtf"];
+    self.bodyText = [[NSAttributedString alloc] initWithFileURL:bodyFileURL options:nil documentAttributes:nil error:nil];
     
     return self;
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="o9S-9x-vyK" customClass="AQTHelloView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6G-Y1-uxO">
+                    <rect key="frame" x="117" y="65" width="87" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Adrien Truong and I can't wait to tell you all about me." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="276" translatesAutoresizingMaskIntoConstraints="NO" id="1yL-uz-nuX">
+                    <rect key="frame" x="20" y="314" width="276" height="79"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="gTT-tI-T9S">
+                    <rect key="frame" x="96" y="140" width="128" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="1yL-uz-nuX" secondAttribute="centerX" constant="2" id="8b5-bT-hi6"/>
+                <constraint firstItem="1yL-uz-nuX" firstAttribute="top" secondItem="gTT-tI-T9S" secondAttribute="bottom" constant="46" id="THF-Xf-pGm"/>
+                <constraint firstItem="gTT-tI-T9S" firstAttribute="top" secondItem="j6G-Y1-uxO" secondAttribute="bottom" constant="35" id="lLu-va-bte"/>
+                <constraint firstItem="j6G-Y1-uxO" firstAttribute="centerX" secondItem="o9S-9x-vyK" secondAttribute="centerX" id="nNI-KB-owC"/>
+                <constraint firstItem="j6G-Y1-uxO" firstAttribute="top" secondItem="o9S-9x-vyK" secondAttribute="top" constant="65" id="ssA-E8-lrD"/>
+                <constraint firstItem="gTT-tI-T9S" firstAttribute="centerX" secondItem="j6G-Y1-uxO" secondAttribute="centerX" id="xH8-Pe-eOg"/>
+            </constraints>
+            <connections>
+                <outlet property="helloLabelTopConstraint" destination="ssA-E8-lrD" id="2Du-Xk-4Uy"/>
+                <outlet property="imageView" destination="gTT-tI-T9S" id="OsP-zL-pd4"/>
+                <outlet property="imageViewTopSpaceConstraint" destination="lLu-va-bte" id="Olh-QU-Qyf"/>
+                <outlet property="myNameLabelTopConstraint" destination="THF-Xf-pGm" id="CEc-2g-JpO"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="profile" width="128" height="128"/>
+    </resources>
+</document>

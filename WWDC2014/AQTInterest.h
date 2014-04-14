@@ -11,9 +11,9 @@
 @interface AQTInterest : NSObject
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, strong) UIImage *image;
-@property (nonatomic, copy) NSString *detailViewControllerStoryboardIdentifier;
-@property (nonatomic, copy) NSAttributedString *storyText;
+@property (nonatomic, copy) NSAttributedString *bodyText;
 
 + (NSArray *)interestsWithDictionaries:(NSArray *)dictionaries;
 

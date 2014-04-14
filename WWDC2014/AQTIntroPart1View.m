@@ -44,6 +44,4 @@
     [sequence runAnimated:YES];
 }
 
-
-
 @end
