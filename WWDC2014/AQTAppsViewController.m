@@ -56,7 +56,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.appInfoTextView.textContainerInset = UIEdgeInsetsMake(0, 15, 5, 15);
+    self.appInfoTextView.textContainerInset = UIEdgeInsetsMake(0, 14, 6, 14);
     
     CoverFlowLayout *layout = [[CoverFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(120, 120);
@@ -86,7 +86,7 @@
     
     NSDictionary *views = NSDictionaryOfVariableBindings(hintView);
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(10)-[hintView]-(10)-|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[hintView(==200)]-(200)-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(168)-[hintView(==200)]" options:0 metrics:nil views:views]];
     
     self.hintView = hintView;
     
@@ -205,40 +205,39 @@
     
     NSArray *colorPickers = @[@"USAlliance", @"Guess Dat Song", @"Globaclock"];
     
-    UIColor *backgroundColor = nil;
-    UIColor *nameTextColor = nil;
-    UIColor *infoTextColor= nil;
+    UIColor *topColor = nil;
+    UIColor *bottomColor = nil;
     
     if ([app.name isEqualToString:@"Workout Hero"]) {
-        backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:42.0f/255.0f alpha:1.0];
-        nameTextColor = [UIColor colorWithRed:0.0f/255.0f green:142.0f/255 blue:244.0f/255.0f alpha:1.0];
-        infoTextColor = [UIColor blackColor];
+        topColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:42.0f/255.0f alpha:1.0];
+        bottomColor = [UIColor colorWithRed:0.0f/255.0f green:142.0f/255 blue:244.0f/255.0f alpha:1.0];
     }
     else if ([colorPickers containsObject:app.name]) {
         LEColorPicker *colorPicker = [[LEColorPicker alloc] init];
         LEColorScheme *scheme = [colorPicker colorSchemeFromImage:app.squircleIcon];
-        backgroundColor = scheme.backgroundColor;
-        nameTextColor = scheme.primaryTextColor;
-        infoTextColor = scheme.secondaryTextColor;
+        topColor = scheme.backgroundColor;
+        bottomColor = scheme.primaryTextColor;
     }
     else {
         SLColorArt *colorArt = [app.squircleIcon colorArt];
-        backgroundColor = colorArt.backgroundColor;
-        nameTextColor = colorArt.primaryColor;
-        infoTextColor = colorArt.detailColor;
+        topColor = colorArt.backgroundColor;
+        bottomColor = colorArt.primaryColor;
     }
     
-    if ([infoTextColor isEqual:[UIColor whiteColor]]) {
-        infoTextColor = [UIColor blackColor];
+    NSArray *whiteTextColor = @[@"Workout Hero", @"USAlliance", @"Guess Dat Song"];
+    
+    UIColor *infoTextColor = nil;
+    if ([whiteTextColor containsObject:app.name]) {
+        infoTextColor = [UIColor whiteColor];
     }
     else {
-        infoTextColor = [UIColor whiteColor];
+        infoTextColor = [UIColor blackColor];
     }
     
     [UIView animateWithDuration:0.30 animations:^{
-        self.topBackgroundView.backgroundColor = backgroundColor;
-        self.view.backgroundColor = nameTextColor;
-        self.appNameLabel.textColor = backgroundColor;
+        self.topBackgroundView.backgroundColor = topColor;
+        self.view.backgroundColor = bottomColor;
+        self.appNameLabel.textColor = topColor;
         self.appInfoTextView.textColor = infoTextColor;
     }];
     

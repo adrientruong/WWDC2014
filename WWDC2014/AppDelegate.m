@@ -12,6 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    return YES;
+    
     UIStoryboard *introStoryboard = [UIStoryboard storyboardWithName:@"Intro" bundle:nil];
     UIViewController *initialViewController = [introStoryboard instantiateInitialViewController];
     

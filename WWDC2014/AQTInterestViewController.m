@@ -19,6 +19,8 @@
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *contentViewTopSpaceConstraint;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topImageViewHeightConstraint;
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+
 @property (nonatomic, assign) CGPoint lastContentOffset;
 
 @end
@@ -44,6 +46,20 @@
     self.tabBarController.tabBar.frame = frame;
 }
 
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    if (self.scrollView.contentSize.height < 550) {
+        self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, self.view.frame.size.height - self.tabBarController.tabBar.frame.origin.y, 0);
+    }
+    else {
+        self.scrollView.contentInset = UIEdgeInsetsZero;
+    }
+    
+    self.scrollView.scrollIndicatorInsets = self.scrollView.contentInset;
+}
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     self.lastContentOffset = scrollView.contentOffset;
@@ -65,7 +81,9 @@
         [self.view needsUpdateConstraints];
     }
     
-    if (scrollView.contentOffset.y + scrollView.frame.size.height > scrollView.contentSize.height - 0.5 || scrollView.contentOffset.y < 0) {
+    if (scrollView.contentOffset.y + scrollView.frame.size.height > scrollView.contentSize.height - 0.5 ||
+        scrollView.contentOffset.y < 0 ||
+        scrollView.contentSize.height < 550) {
         return;
     }
     

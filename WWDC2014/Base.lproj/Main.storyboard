@@ -41,7 +41,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Hero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxX-GV-SPI">
-                                <rect key="frame" x="94" y="191" width="132" height="24"/>
+                                <rect key="frame" x="94" y="192" width="132" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -63,8 +63,8 @@
                             <constraint firstAttribute="trailing" secondItem="kmb-eH-Gej" secondAttribute="trailing" id="NE4-m5-Hhm"/>
                             <constraint firstItem="pnU-6q-KSV" firstAttribute="leading" secondItem="aa4-nv-uy2" secondAttribute="leading" id="T8g-cs-TvJ"/>
                             <constraint firstItem="kmb-eH-Gej" firstAttribute="leading" secondItem="aa4-nv-uy2" secondAttribute="leading" id="ap7-fv-pMH"/>
-                            <constraint firstItem="kmb-eH-Gej" firstAttribute="top" secondItem="DxX-GV-SPI" secondAttribute="bottom" constant="8" id="fnH-H7-Uo8"/>
-                            <constraint firstItem="DxX-GV-SPI" firstAttribute="top" secondItem="pnU-6q-KSV" secondAttribute="bottom" constant="11" id="u2L-se-cZn"/>
+                            <constraint firstItem="kmb-eH-Gej" firstAttribute="top" secondItem="DxX-GV-SPI" secondAttribute="bottom" constant="7" id="fnH-H7-Uo8"/>
+                            <constraint firstItem="DxX-GV-SPI" firstAttribute="top" secondItem="pnU-6q-KSV" secondAttribute="bottom" constant="12" id="u2L-se-cZn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Apps" image="apps-icon" id="QYs-xR-f7K"/>
@@ -490,6 +490,7 @@ About a week from now, I will be attending LAHacks at UCL and I hope that I will
                     <connections>
                         <outlet property="bodyLabel" destination="zJt-2a-d0u" id="xfF-5X-qDr"/>
                         <outlet property="contentViewTopSpaceConstraint" destination="4j0-eY-iOJ" id="UDZ-zr-2Xt"/>
+                        <outlet property="scrollView" destination="RzU-NK-jmf" id="go7-cP-kpN"/>
                         <outlet property="subtitleLabel" destination="9XF-BC-Tmw" id="can-CO-Zsb"/>
                         <outlet property="titleLabel" destination="213-uO-pVG" id="d8b-zx-gYd"/>
                         <outlet property="topImageView" destination="iUT-xW-mrc" id="jT3-aB-x2u"/>
