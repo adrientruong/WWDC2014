@@ -18,7 +18,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSMutableArray *screenshots = [NSMutableArray array];
-    for (NSInteger i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
         NSString *imageName = [NSString stringWithFormat:@"ward%i", i + 1];
         UIImage *screenshot = [UIImage imageNamed:imageName];
         [screenshots addObject:screenshot];
